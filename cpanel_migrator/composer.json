@@ -1,0 +1,9 @@
+{
+    "name": "blesta/cpanel_migrator",
+    "description": "CpanelMigrator",
+    "license": "proprietary",
+    "type": "blesta-plugin",
+    "require": {
+        "blesta/composer-installer": "~1.0"
+    }
+}

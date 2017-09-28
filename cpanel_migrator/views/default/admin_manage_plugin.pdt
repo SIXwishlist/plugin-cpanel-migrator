@@ -1,0 +1,27 @@
+<?php
+    $this->Widget->clear();
+    $this->Widget->create($this->_('CpanelMigrator.manage_plugin', true));
+    $this->Form->create();
+    $this->Form->fieldHidden('migration', true);
+?>
+<div class="inner">
+	<div class="title_row first">
+		<h3><?php $this->_('CpanelMigrator.manage_plugin.settings'); ?></h3>
+	</div>
+	<div class="pad">
+		<p>
+            <?php $this->_('CpanelMigrator.manage_plugin.settings.label.migration_desc'); ?>
+        </p>
+        <p>
+            <strong><?php $this->_('CpanelMigrator.manage_plugin.settings.label.migration_note'); ?></strong>
+        </p>
+	</div>
+
+	<div class="links_row">
+		<a class="btn btn-primary submit pull-right" href="#"><span><?php $this->_('CpanelMigrator.manage_plugin.settings.button.migrate'); ?></span></a>
+	</div>
+</div>	
+<?php
+    $this->Form->end();
+    $this->Widget->end();
+?>
