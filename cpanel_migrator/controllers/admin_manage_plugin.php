@@ -71,7 +71,7 @@ class AdminManagePlugin extends AppController
 
                     // Migrate module server groups
                     $module_groups = $this->Record->select()->from('module_groups')->where('module_id', '=', $extended_module->id)->fetchAll();
-                     
+
                     foreach ($module_groups as $group) {
                         $this->Record->insert('module_groups', [
                             'module_id' => $core_module->id,
@@ -89,7 +89,7 @@ class AdminManagePlugin extends AppController
 
                     // Migrate module server rows
                     $module_rows = $this->Record->select()->from('module_rows')->where('module_id', '=', $extended_module->id)->fetchAll();
-                     
+
                     foreach ($module_rows as $row) {
                         $this->Record->insert('module_rows', [
                             'module_id' => $core_module->id
@@ -119,7 +119,7 @@ class AdminManagePlugin extends AppController
 
                         // Delete unused fields
                         $this->Record->from('package_meta')->where('package_id', '=', $package->id)->where('key', '!=', 'package')->where('key', '!=', 'type')->delete();
-                    
+
                         // Map pricing id to package id
                         $package_pricing = $this->Record->select()->from('package_pricing')->where('package_id', '=', $package->id)->fetchAll();
 
