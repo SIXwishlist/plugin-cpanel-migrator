@@ -1,6 +1,6 @@
 <?php
 /**
- * Decrypts all the encrypted service fields.
+ * Migrates all the data from cPanel Extended to cPanel core.
  *
  * @package Blesta
  * @subpackage Blesta.plugins
